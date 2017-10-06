@@ -1,0 +1,43 @@
+{
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 8
+	},
+	"env": {
+		"es6": true,
+		"browser": true,
+		"jquery": true,
+		"node": true
+	},
+	"rules": {
+		"no-multi-spaces": "error",
+		"indent": ["error", "tab", {
+			"MemberExpression": "off"
+		}],
+		"semi": "error",
+		"no-whitespace-before-property" : "error",
+		"no-console": "off",
+		"no-irregular-whitespace": "error",
+		"no-trailing-spaces": "error",
+		"space-before-function-paren": ["error", {
+			"anonymous": "never",
+			"named": "never",
+			"asyncArrow": "always"
+		}],
+		"space-in-parens": ["error", "never"],
+		"spaced-comment": "error",
+		"space-unary-ops": "error",
+		"arrow-spacing": "error",
+		"new-parens": "error",
+		"semi-spacing": "error",
+		"computed-property-spacing": ["error", "never"],
+		"comma-spacing": ["error", { "before": false, "after": true }],
+		"keyword-spacing": ["error", { "before": true, "after": true }],
+		"key-spacing": ["error", { "beforeColon": false }],
+		"object-curly-spacing": ["error", "always"],
+		"no-extra-parens": "error",
+		"space-before-blocks": "error",
+		"eol-last": ["error", "always"],
+		"no-useless-rename": "warn"
+	}
+}
