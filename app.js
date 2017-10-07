@@ -23,7 +23,7 @@ app.post('/api/test', (req, res) => {
 })
 
 app.put('/api/test', (req, res) => {
-	console.log('\nPUT\n', req.query.test_1, req.query.test_2);
+	console.log('\nPUT\n');
 	
 	res.status(200).send({ message: 'put success'});
 })
