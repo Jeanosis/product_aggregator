@@ -17,16 +17,16 @@ app.get('/api/test', (req, res) => {
 });
 
 app.post('/api/test', (req, res) => {
-	console.log('\nPOST\n');
-	
+	console.log('\nPOST\n', req.body);
+
 	res.status(200).send({ message: 'post success' });
-})
+});
 
 app.put('/api/test', (req, res) => {
-	console.log('\nPUT\n');
-	
-	res.status(200).send({ message: 'put success'});
-})
+	console.log('\nPUT\n', req.body);
+
+	res.status(200).send({ message: 'put success' });
+});
 
 app.listen(9000, '0.0.0.0', () => {
 	console.log('Product Aggregator listening on port 9000!');
