@@ -1,9 +1,10 @@
 const fs = require('fs');
 
 fs.readdirSync(__dirname)
-	.filter(name => name !== 'index.js')
-	.forEach(file_name => {
-		let name = file_name.replace(/\..*$/g, '');
+	.filter(filename => filename !== 'index.js')
+	.forEach(filename => {
+		let model = require(`./${filename}`);
+		let { modelName } = model;
 
-		exports[name] = require(`./${file_name}`);
+		exports[modelName] = model;
 	});

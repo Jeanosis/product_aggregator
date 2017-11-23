@@ -14,6 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('' + __dirname + '/dist'));
 
 (async () => {
+	mongoose.Promise = Promise;
 	await mongoose.connect(uri, { useMongoClient: true });
 
 	// Applying routes
