@@ -6,6 +6,8 @@ exports.get = (req, res) => {
 	console.log('PRODUCT_ID', product_id);
 	console.log('GET', start_date, end_date);
 
+	let dates = await Product.find({ start_date, end_date });
+
 	let start_timestamp = Date.parse(start_date);
 	let end_timestamp = Date.parse(end_date);
 
