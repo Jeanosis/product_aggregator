@@ -1,3 +1,6 @@
+const appRoot = require('app-root-path');
+const { Product } = require(appRoot + '/models');
+
 exports.get = (req, res) => {
 	let { product_id } = req.params;
 
